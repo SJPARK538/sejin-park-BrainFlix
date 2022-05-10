@@ -32,7 +32,7 @@ class App extends React.Component {
     <Hero />
     <Main maindata ={this.state.mainVideo} />
     <Comments comments ={this.state.defaults}/>
-    <Sidepage />
+    <Sidepage sideVideo = {this.state.sideVideo}/>
     </>
   );  
 }
