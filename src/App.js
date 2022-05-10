@@ -4,6 +4,9 @@ import Hero from './components/Hero/Hero';
 import Comments from './components/Comments/Comments';
 import Main from './components/Main/Main';
 import data from './data/video-details.json';
+import side from './data/videos.json';
+import Sidepage from "./components/SideVideo/SideVideo";
+
 
 
 
@@ -12,7 +15,9 @@ class App extends React.Component {
     super()
     this.state = {
       mainVideo: data[0],
-      videoList : data
+      videoList: data,
+      defaults: data[0].comments,
+      sideVideo: side
     }
 
     
@@ -20,14 +25,14 @@ class App extends React.Component {
 
   
   render(){
-    console.log(data)
-    
+
   return (
     <>
     <Header />
     <Hero />
-    <Main data ={this.state.mainVideo} />
-    <Comments />
+    <Main maindata ={this.state.mainVideo} />
+    <Comments comments ={this.state.defaults}/>
+    <Sidepage />
     </>
   );  
 }
