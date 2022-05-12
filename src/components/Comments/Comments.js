@@ -1,10 +1,14 @@
 import React from "react";
 import avarta from "../../assets/Images/avartar.jpg"
+import videoDetails from '../../data/video-details.json'
 
 
-const Comments = ({comments}) => {
 
-    const Defaults = comments.map((comment, index) => {
+const Comments = (props) => {
+        const mainContentId = props.mainDisplayId
+        const mainContent = videoDetails.find(video => video.id === mainContentId)
+        
+    const Defaults = mainContent.comments.map((comment, index) => {
         return (    
         <div key={index}  className="comments__default-container">
             <div className="comments__default-image-container"></div>

@@ -3,9 +3,10 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Comments from './components/Comments/Comments';
 import Main from './components/Main/Main';
-import data from './data/video-details.json';
-import side from './data/videos.json';
 import Sidepage from "./components/SideVideo/SideVideo";
+import data from './data/video-details.json';
+
+
 
 
 
@@ -14,15 +15,17 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      mainVideo: data[0],
-      videoList: data,
-      defaults: data[0].comments,
-      sideVideo: side
+      mainVideoId: data[0].id
+
+      // sideVideo: side
     }
 
     
   }
+  changeId = (id) => {
+    this.setState({mainVideoId: id})
 
+  }
   
   render(){
 
@@ -30,9 +33,10 @@ class App extends React.Component {
     <>
     <Header />
     <Hero />
-    <Main maindata ={this.state.mainVideo} />
-    <Comments comments ={this.state.defaults}/>
-    <Sidepage sideVideo = {this.state.sideVideo}/>
+    <Main mainDisplayId={this.state.mainVideoId}/>
+    <Comments  mainDisplayId={this.state.mainVideoId}/>
+    <Sidepage  displayVideo={this.changeId} mainDisplayId={this.state.mainVideoId}
+    />
     </>
   );  
 }
