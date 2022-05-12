@@ -6,7 +6,7 @@ import videoDetails from '../../data/video-details.json'
 
 
 const Main = (props) => {
-    console.log(props)  
+     console.log(props)
 
     const mainContentId = props.mainDisplayId
 

@@ -1,14 +1,10 @@
 import React from "react";
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
-import Comments from './components/Comments/Comments';
 import Main from './components/Main/Main';
+import Comments from './components/Comments/Comments';
 import Sidepage from "./components/SideVideo/SideVideo";
 import data from './data/video-details.json';
-
-
-
-
 
 
 class App extends React.Component {
@@ -17,10 +13,8 @@ class App extends React.Component {
     this.state = {
       mainVideoId: data[0].id
 
-      // sideVideo: side
     }
 
-    
   }
   changeId = (id) => {
     this.setState({mainVideoId: id})

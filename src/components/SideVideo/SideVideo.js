@@ -11,7 +11,7 @@ const Sidepage = (props) => {
     const SideContent = filteredVideos.map((side, index) => {
         return(
             <div key={side.id} onClick={()=> handleClick(side.id)} className="sidepage__content-container">
-                <div className="sidepage__image-container">{side.image}</div>
+                <img src ={side.image} alt="video thumbnail" className="sidepage__image-container"></img>
                 <div className="sidepage__text-container">
                     <div className="sidepage__text-container--title">{side.title}</div>
                     <div className="sidepage__text-container--author">{side.channel}</div>
