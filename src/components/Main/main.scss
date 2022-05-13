@@ -5,31 +5,34 @@
     margin: 0 auto;
 
     &__title {
-        margin: 0 1rem;
+        margin: 1.5rem 1rem 0 1rem;
+        padding-bottom: 1rem;
         font-size: 1.5rem;
         font-weight: 700;
         color: $primary-black;
         line-height: 2rem;
+        border-bottom: 1px $secondary-mercury solid;
     }
 
     &__head-container {
         margin: 0 1rem; 
-        border: solid black 1px;
         display: flex;
+        border-bottom: 1px $secondary-mercury solid;
     }
-
-
 
     &__info-container {
         display: flex;
         flex-direction: column;
         width: 50%;
-        border: solid 2px red;
+        margin-bottom: 1rem;
+        
 
         &--author {
             font-size: 0.8125rem;
             font-weight: 700;
             line-height: 1.125rem;  
+            margin-top: 1rem;
+            margin-bottom: 0;
         }
 
         &--date {
@@ -37,13 +40,65 @@
             font-weight: 400;
             line-height: 1.125rem;  
             color: $primary-silver;
+            margin-top: 1rem;
+            margin-bottom: 0;
         }
     }
 
     &__views-likes-container{
         display: flex;
         flex-direction: column;
+        width: 50%;
     }
 
+    &__views {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;  
+        color: $primary-silver;
+        margin-top: 1rem;
+        margin-bottom: 0;
+
+        &-icon {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        &-container {
+            display: flex;
+            gap: 1rem;
+            
+        }
+    }   
+
+    &__likes {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;  
+        color: $primary-silver;
+        margin-top: 1rem;
+        margin-bottom: 0;
+
+        &-icon{
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        &-container {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    &__description-container{
+        margin: 0 1rem;
+
+        &--content {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1.125rem;
+            color: $primary-black;
+        }
+    }
     
 }

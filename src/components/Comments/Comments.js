@@ -1,6 +1,7 @@
 import React from "react";
 import avarta from "../../assets/Images/avartar.jpg"
 import videoDetails from '../../data/video-details.json'
+import "./comments.scss"
 
 
 
@@ -26,13 +27,13 @@ const Comments = (props) => {
     return(
         <div className="comments">
             <h3 className="comments__title" >3 Comments</h3>
-            <img src={avarta} className="comments__image"></img>
             <form className="comments__input-container">
+                <img src={avarta} className="comments__image"></img>
                 <div className="comments__text-container">
                     <h5 className="comments__text-container--subtitle">Join the Conversation</h5>
-                    <textarea name="name" cols="50" rows="10" className="comment__text-container--textarea" placeholder="Add a new comment"></textarea>
+                    <textarea name="name" cols="28" rows="6" className="comment__text-container--textarea" placeholder="Add a new comment"></textarea>
                     <div className="comments__text-container--button-container">
-                        <button className="comments__text-container--button">submit</button>
+                        <button className="comments__text-container--button">COMMENT</button>
                     </div>
                 </div>
             </form>

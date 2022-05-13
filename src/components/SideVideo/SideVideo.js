@@ -1,5 +1,6 @@
 import React from "react";
 import sideVideo from "../../data/videos.json";
+import "./sidevideo.scss"
 
 const Sidepage = (props) => {
     const handleClick = (id) =>{
@@ -22,9 +23,9 @@ const Sidepage = (props) => {
             
     })
     return (
-    <div className="sidepage__container">
-        <h4 className="sidepage__title">Next Video</h4>
-        <div>{SideContent}</div>
+    <div className="sidepage">
+        <h4 className="sidepage__title">NEXT VIDEOS</h4>
+        <div className="sidepage__container">{SideContent}</div>
     </div>
     )
 }

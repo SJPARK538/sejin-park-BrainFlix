@@ -1,0 +1,101 @@
+@use "../../styles/partials/variables" as *;
+
+
+.comments {
+    margin: 0 auto;
+
+    &__title {
+        margin: 0 1rem;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 700;
+    }
+
+    &__image {
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        margin-top: 2.5rem;
+    }
+
+    &__input-container {
+        margin: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondary-mercury;
+        gap: 1rem;   
+    }
+
+    &__text-container {
+        display: flex; 
+        flex-direction: column;
+        width: 100%;
+
+        &--subtitle {
+            margin-bottom: 0;
+            color: $primary-silver;
+            font-size: 0.8125rem;
+            line-height: 1.25rem;
+        }
+
+        &--button {
+            padding-left: 1rem;
+            margin: 1rem 1rem 1rem 0;
+            background: url(../../assets/Images/Icons/add_comment.svg) no-repeat left;
+            color: $primary-white;
+            background-color: $primary-blue;
+            border-radius:  0.25rem;
+            border: none;
+            height: 2.5rem;
+            width: 100%;
+            font-size: 0.75rem;
+        }
+    }
+    // Default Section
+    &__default{
+
+        &-container {
+            margin: 0 1rem;
+            border-bottom: 1px solid $secondary-mercury;
+            display: flex;
+            gap: 1rem;
+        }
+
+        &-image-container {
+            background-color: $secondary-mercury;
+            height: 2.25rem;
+            width: 2.25rem;
+            border-radius: 50%;
+            margin-top: 1rem;
+        }
+
+        &-content-container {
+            width: 85%;
+        }
+    }
+    &__content-header {
+        display: flex;  
+        justify-content: space-between;
+        
+
+        &--name {
+            color: $primary-black;
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+            font-weight: 700;
+            
+        }
+
+        &--date {
+            color: $primary-silver;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__content-textarea{
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+}
