@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../../assets/Images/BrainFlix-logo.svg"
-import searchIcon from "../../assets/Images/Icons/search.svg"
-import uploadIcon from "../../assets/Images/Icons/upload.svg"
+import avarta from "../../assets/Images/avartar.jpg"
+import "./header.scss"
+
 
 
 const Header = () => {
@@ -11,14 +12,16 @@ const Header = () => {
                 <a href="index.html"><img clsss="header__logo" alt ="brainflix logo"src ={logo}></img></a>
             </div>
             <div className="header__search-container">
-                <img className="header__search-icon" alt = "brainflix search icon" src={searchIcon}></img>
-                <h4 className= "header__search">Search</h4>
+                <input type ="text" class="header__search" placeholder="Search"></input>
+                <div className="header__image-container">
+                    <img src={avarta} className="header__image" img alt="avarta image"></img>
+                </div>
             </div>
             <div className="header__upload-container">
-                <img className="header__upload-icon" alt = "brainflix upload icon" src={uploadIcon}></img>
-                <h4 className ="header__upload">UPLOAD</h4>
+                <button className="header__upload">UPLOAD</button>
             </div>
-            <div className="header__upload-container--avarta"></div>
+            <img src={avarta} className="header__avarta" img alt="avarta image"></img>
+            
         </header>
     )
 }
