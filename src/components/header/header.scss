@@ -1,4 +1,5 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
 // Mobile Version
 .header {
@@ -14,13 +15,18 @@
     }
 
     &__search {
-        padding-left: 2rem;
-        background: url(../../assets/Images/Icons/search.svg) no-repeat left;
+        padding-left: 2.25rem;
+        background: url(../../assets/Images/Icons/search.svg) no-repeat;
+        background-position: 0.5rem 0.5rem;
         background-size: 1.2rem;
         width: 60vw;
         border: $secondary-mercury 2px solid;
         border-radius: 0.25rem;
         color: $primary-black;
+
+        &::after {
+            border: 2px solid $primary-blue;
+        }
 
         &-container {
             margin: 1rem;
@@ -44,17 +50,27 @@
     }
 
     &__upload {
-        padding-left: 1rem;
         margin-bottom: 1rem;
-        background: url(../../assets/Images/Icons/upload.svg) no-repeat left;
         background-color: $primary-blue;
         color: $primary-white;
-        background-size: 1.2rem;
         border-radius:  0.25rem;
         border: none;
         height: 2.5rem;
         width: 90vw;
         font-size: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--logo {
+            width: 1.2rem;
+        }
+
+        &--text {
+            font-size: 0.8125rem;
+            width: 100%;
+
+        }
         
 
         &:hover {

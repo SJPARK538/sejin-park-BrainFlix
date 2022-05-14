@@ -1,5 +1,7 @@
+@use "./fonts" as *;
+
 * {
-    font-family: "AvenirRegular", "AvenirDemi", "AvenirBold", Verdana, Tahoma, sans-serif;
+    font-family: "AvenirNext LT Pros", Verdana, Tahoma, sans-serif;
     text-decoration: none;
     list-style: none;
 }
@@ -8,4 +10,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box  ;
+
+
 }

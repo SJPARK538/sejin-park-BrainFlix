@@ -1,5 +1,5 @@
 @use "../../styles/partials/variables" as *;
-
+@use "../../styles/partials/global" as *;
 
 .comments {
     margin: 0 auto;
@@ -32,16 +32,22 @@
         width: 100%;
 
         &--subtitle {
-            margin-bottom: 0;
+            margin-bottom: 0.25rem;
             color: $primary-silver;
             font-size: 0.8125rem;
             line-height: 1.25rem;
         }
 
+        &--textarea {
+            border-radius: 0.25rem;
+            border: 1px solid $secondary-mercury;
+            width: 90%;
+            padding: 0.75rem;
+
+        }
+
         &--button {
-            padding-left: 1rem;
             margin: 1rem 1rem 1rem 0;
-            background: url(../../assets/Images/Icons/add_comment.svg) no-repeat left;
             color: $primary-white;
             background-color: $primary-blue;
             border-radius:  0.25rem;
@@ -49,8 +55,23 @@
             height: 2.5rem;
             width: 100%;
             font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-add {
+                width: 1.2rem;
+                
+            }
+            
+            &-text {
+                font-size: 0.8125rem;
+                width: 100%;
+
+            }
         }
     }
+
     // Default Section
     &__default{
 

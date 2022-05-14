@@ -1,7 +1,9 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
 
 .sidepage {
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
 
 
     &__title {
