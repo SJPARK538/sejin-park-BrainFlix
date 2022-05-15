@@ -101,3 +101,29 @@
         }
     }
 }
+
+// Desktop Version
+@include desktop {
+    .sidepage {
+        margin: 0 5rem 0 0;
+        position: absolute;
+        top: 64.1vw;
+        left: 66.5%;
+        width: 51vw;
+        border-left: 1px solid $secondary-mercury;
+        
+        &__title {
+            margin: 2.25rem 0 2.25rem 1.5rem;
+        }
+
+        &__container {
+            margin-left: 1.5rem;
+            width: 51%;
+        }
+        img {
+            width: 9vw;
+            height: 4rem;
+        }
+      
+    }
+}

@@ -177,7 +177,7 @@
             &--button {
                 margin: 0 0 0 1.5rem;
                 height: 2.5rem;
-                width: 31vh;
+                width: 23vh;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -240,5 +240,40 @@
             line-height: 1.375rem;    
             margin-bottom: 1.5rem;
         }
+    }
+}
+
+// Desktop Version
+@include desktop {
+    .comments {
+        width: 60vw;
+        margin: 0 0 0 5rem;
+
+    
+        &__text-container {
+    
+            &--textarea {
+                width: 63%;
+            }
+    
+            &--button {
+                width: 15vw;
+            }
+        }
+    
+        // Default Section
+        &__default{
+            &-content-container {
+                margin-right: 1.5rem;
+            }
+
+            &-container {
+                &:nth-child(3){
+                    border-bottom: none;
+                }
+            }
+        
+        }
+    
     }
 }

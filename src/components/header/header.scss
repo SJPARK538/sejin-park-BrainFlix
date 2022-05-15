@@ -146,3 +146,39 @@
         }
     }
 }
+
+// Desktop Version
+@include desktop {
+    .header {
+
+        &__logo {
+                &-container {
+                width: 55%;
+                margin: 2.25rem 0rem 1.5rem 5rem;
+            }
+        } 
+        &__search {            
+            width: 80%;
+            height: 2.25rem;
+            &-container {
+                margin: 2.25rem 0 1.5rem 0;
+                width: 25%;
+            }
+        }
+        &__upload {
+            &-container {
+                height: 2.625rem;
+            }
+    
+            &-container {
+                margin: 2.25rem 1.5rem 1.5rem 0;
+                width: 13%;
+            }
+        }
+        &__avarta {
+            &-container {
+                margin: 2.25rem 5rem 1.5rem 0;
+            }
+        }
+    }
+}
