@@ -1,12 +1,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 // Mobile Version
 .header {
     margin: 0 auto;
     
     &__logo {
-        max-height: 1.56rem;
+        height: 1.5625rem;
     
             &-container {
             margin: 1rem;
@@ -23,6 +24,7 @@
         border: $secondary-mercury 2px solid;
         border-radius: 0.25rem;
         color: $primary-black;
+        background-color: $secondary-white;
 
         &::after {
             border: 2px solid $primary-blue;
@@ -45,7 +47,6 @@
         &-container {
             display: flex;
             align-items: center;
-            
         }
     }
 
@@ -67,12 +68,10 @@
         }
 
         &--text {
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
             width: 100%;
-
         }
         
-
         &:hover {
             background-color: $secondary-blue;
         }
@@ -86,4 +85,64 @@
         display: none;
     }
 
+}
+
+// Tablet Version
+@include tablet {
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        &__logo {
+                &-container {
+                display: flex;
+                align-items: center;
+                width: 20%;
+                margin: 2.25rem 0 1.5rem 1.5rem;
+            }
+        }
+    
+        &__search {            
+            width: 100%;
+            height: 2.25rem;
+
+            &-container {
+                margin: 2.25rem 0 1.5rem 0;
+                display: flex;
+                width: 33%;
+            }
+        }
+    
+        &__image {
+            display: none;
+        }
+    
+        &__upload {
+            height: 2.625rem;
+            margin: 0;
+
+            &-container {
+                display: flex;
+                align-items: center;
+                height: 2.625rem;
+            }
+    
+            &-container {
+                margin: 2.25rem 0 1.5rem 0;
+                width: 23%;
+            }
+        }
+    
+        &__avarta {
+            display: inline-block;
+            height: 2.25rem;
+            width: 2.25rem;
+            border-radius: 50%;
+
+            &-container {
+                width: 5%;
+                margin: 2.25rem 1.5rem 1.5rem 0;
+            }
+        }
+    }
 }

@@ -15,7 +15,7 @@ const Main = (props) => {
                 <h1 className="main__title">{mainContent.title}</h1>
                 <div className="main__head-container">
                     <div className="main__info-container">
-                        <h2 className="main__info-container--author">{mainContent.channel}</h2>
+                        <h2 className="main__info-container--author">By {mainContent.channel}</h2>
                         <h2 className="main__info-container--date">{new Date(mainContent.timestamp).toLocaleDateString()}</h2>
                     </div>
                     <div className="main__views-likes-container">

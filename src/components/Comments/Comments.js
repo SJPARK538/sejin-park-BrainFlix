@@ -34,7 +34,7 @@ const Comments = (props) => {
                     <h5 className="comments__text-container--subtitle">JOIN THE CONVERSATION</h5>
                     <textarea name="name" cols="28" rows="5" className="comments__text-container--textarea" placeholder="Add a new comment"></textarea>
                     <div className="comments__text-container--button-container">
-                        <button className="comments__text-container--button"><img src={comment} alt="add comment" className="comments__text-container--button-add"></img><div className="comments__text-container--button-text">COMMENTS</div></button>
+                        <button className="comments__text-container--button"><img src={comment} alt="add comment" className="comments__text-container--button-add"></img><div className="comments__text-container--button-text">COMMENT</div></button>
                     </div>
                 </div>
             </form>

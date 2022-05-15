@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 
 
@@ -14,4 +15,18 @@
         outline-width: 0;
       }
     }
+  }
+
+  // Tablet Version
+  @include tablet {
+    .hero {
+      display: flex;
+      justify-content: center;
+      background-color: $primary-black;
+
+
+      &__video {
+        width: 95vw;
+        }
+      }
   }
