@@ -1,0 +1,116 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.upload {
+    margin: 0 auto;
+
+    &__title {
+        margin: 1.5rem 1rem 0 1rem;
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
+        color: $primary-black;
+        line-height: 2rem;
+        border-top: 1px $secondary-mercury solid;
+        
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__video-container{
+        margin: 0 1rem;
+        &--title {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1.125rem;  
+            color: $primary-silver;
+            margin-top: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &--video {
+            background: url(../../assets/Images/Upload-video-preview.jpg) no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 90vw;
+            height: 30vh;
+            
+        }
+    }
+
+    &__text-container {
+        margin: 0 1rem;
+
+        &--subtitle{
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1.125rem;  
+            color: $primary-silver;
+            margin-top: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &--textarea{
+            &--up{
+                width: 90%;    
+                border: $secondary-mercury 2px solid;
+                border-radius: 0.25rem;
+                color: $primary-black;
+                padding: 0.75rem;
+            }
+
+            &--bottom{
+                width: 90%;
+                border: $secondary-mercury 2px solid;
+                border-radius: 0.25rem;
+                color: $primary-black;
+                padding: 0.75rem;
+            }
+        }
+    }
+    &__button-container{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        &--button{
+            margin-bottom: 1rem;
+            background-color: $primary-blue;
+            color: $primary-white;
+            border-radius:  0.25rem;
+            border: none;
+            height: 2.5rem;
+            width: 90vw;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--logo {
+            width: 1.2rem;
+        }
+
+        &--text {
+            font-size: 0.75rem;
+            width: 90%;
+            padding-right: 1.5rem;
+        }
+
+        &--cancel {
+            font-size: 0.75rem;
+            width: 90vw;
+            height: 2.5rem;
+            border: none;
+            color: $primary-blue;
+            background-color: $primary-white;
+
+        }
+    }
+
+}
