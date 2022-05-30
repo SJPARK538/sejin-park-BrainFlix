@@ -11,7 +11,7 @@ const Comments = ({comments}) => {
         
     const Defaults = comments.map((comment, index) => {
         return (    
-        <div key={index}  className="comments__default-container">
+        <div key={comment.id}  className="comments__default-container">
             <div className="comments__default-image-container"></div>
             <div className="comments__default-content-container">
                 <div className="comments__content-header">

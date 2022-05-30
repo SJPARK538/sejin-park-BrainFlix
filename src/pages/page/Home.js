@@ -52,7 +52,7 @@ componentDidUpdate(prevProps){
 render(){
 return (
     <>
-    <Hero hero={this.state.selectedVideo[0]} />
+    <Hero hero={this.state.selectedVideo} />
     <Main mainDisplayId={this.state.selectedVideo}/>
     <Comments  comments={this.state.comments}/>
     <SideVideo  sideVideos={this.state.sideVideos}/>
