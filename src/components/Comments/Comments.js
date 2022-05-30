@@ -1,16 +1,15 @@
 import React from "react";
 import avarta from "../../assets/Images/avartar.jpg"
-import videoDetails from '../../data/video-details.json'
-import comment from "../../assets/Images/Icons/add_comment.svg"
+import commentButton from "../../assets/Images/Icons/add_comment.svg"
 import "./comments.scss"
 
 
 
-const Comments = (props) => {
-        const mainContentId = props.mainDisplayId
-        const mainContent = videoDetails.find(video => video.id === mainContentId)
+const Comments = ({comments}) => {
+        // const mainContentId = props.mainDisplayId
+        // const mainContent = videoDetails.find(video => video.id === mainContentId)
         
-    const Defaults = mainContent.comments.map((comment, index) => {
+    const Defaults = comments.map((comment, index) => {
         return (    
         <div key={index}  className="comments__default-container">
             <div className="comments__default-image-container"></div>
@@ -34,7 +33,7 @@ const Comments = (props) => {
                     <h5 className="comments__text-container--subtitle">JOIN THE CONVERSATION</h5>
                     <textarea name="name" cols="28" rows="5" className="comments__text-container--textarea" placeholder="Add a new comment"></textarea>
                     <div className="comments__text-container--button-container">
-                        <button className="comments__text-container--button"><img src={comment} alt="add comment" className="comments__text-container--button-add"></img><div className="comments__text-container--button-text">COMMENT</div></button>
+                        <button className="comments__text-container--button"><img src={commentButton} alt="add comment" className="comments__text-container--button-add"></img><div className="comments__text-container--button-text">COMMENT</div></button>
                     </div>
                 </div>
             </form>

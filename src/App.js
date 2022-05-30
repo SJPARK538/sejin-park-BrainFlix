@@ -1,42 +1,26 @@
 import React from "react";
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Main from './components/Main/Main';
-import Comments from './components/Comments/Comments';
-import Sidepage from "./components/SideVideo/SideVideo";
-import data from './data/video-details.json';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from "./pages/page/Home"
+import Upload from "./pages/page/Upload"
 
 
 
 class App extends React.Component {
-  constructor(){
-    super()
-    this.state = {
-      mainVideoId: data[0].id
-
-
+  render() {
+    return (
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/video/:id" render={props => {return <Home {...props} />;}}/>
+          <Route path="/upload"  component={Upload} />
+        </Switch>
+      </Router>
+    )
     }
-
-  }
-  changeId = (id) => {
-    this.setState({mainVideoId: id})  
-
-
   }
   
-  render(){
+  export default App;
 
-  return (
-    <>
-    <Header />
-    <Hero mainDisplayId={this.state.mainVideoId} />
-    <Main mainDisplayId={this.state.mainVideoId}/>
-    <Comments  mainDisplayId={this.state.mainVideoId}/>
-    <Sidepage  displayVideo={this.changeId} mainDisplayId={this.state.mainVideoId}
-    />
-    </>
-  );  
-}
-}
 
-export default App;

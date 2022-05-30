@@ -1,26 +1,29 @@
 import React from "react";
-import sideVideo from "../../data/videos.json";
-import "./sidevideo.scss"
+import "./sidevideo.scss";
+import { Link } from "react-router-dom";
 
-const Sidepage = (props) => {
-    const handleClick = (id) =>{
-        props.displayVideo(id)
-    }
 
-   const filteredVideos = sideVideo.filter(video => video.id !== props.mainDisplayId) 
+const Sidepage = ({sideVideos}) => {
 
-    const SideContent = filteredVideos.map((side, index) => {
+
+    const SideContent = sideVideos.map((side, index) => {
         return(
-            <div key={side.id} onClick={()=> handleClick(side.id)} className="sidepage__content-container">
+            <Link 
+            className="sidevideo__selected"
+            to={`/video/${side.id}`}
+            key={side.id}
+            >
+
+            <div key={side.id} id={side.id} className="sidepage__content-container">
                 <img src ={side.image} alt="video thumbnail" className="sidepage__image-container"></img>
                 <div className="sidepage__text-container">
                     <div className="sidepage__text-container--title">{side.title}</div>
                     <div className="sidepage__text-container--author">{side.channel}</div>
                 </div>
             </div>
+            </Link>
         
         )
-            
     })
     return (
     <div className="sidepage">

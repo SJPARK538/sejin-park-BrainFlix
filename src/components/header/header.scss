@@ -3,6 +3,8 @@
 @use "../../styles/partials/breakpoints" as *;
 
 // Mobile Version
+
+
 .header {
     margin: 0 auto;
     
@@ -37,6 +39,7 @@
             justify-content: space-between;
         }
     }
+
 
     &__image {
         height: 2.25rem;
@@ -125,12 +128,15 @@
                 display: flex;
                 align-items: center;
                 height: 2.625rem;
-            }
-    
-            &-container {
                 margin: 2.25rem 0 1.5rem 0;
                 width: 23%;
             }
+            
+            &-link {
+                display: flex;
+                width: 100%;
+            }
+    
         }
     
         &__avarta {

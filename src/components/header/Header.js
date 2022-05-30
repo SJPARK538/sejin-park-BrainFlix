@@ -3,6 +3,7 @@ import logo from "../../assets/Images/BrainFlix-logo.svg"
 import avarta from "../../assets/Images/avartar.jpg"
 import upload from "../../assets/Images/Icons/upload.svg"
 import "./header.scss"
+import { Link } from "react-router-dom";
 
 
 
@@ -11,7 +12,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className ="header__logo-container">
-                <a href="index.html" className="header__link"><img className="header__logo" alt ="brainflix logo"src ={logo}></img></a>
+                <Link to ="/" className="header__link"><img className="header__logo" alt ="brainflix logo"src ={logo}></img></Link>
             </div>
             <div className="header__search-container">
                 <input type ="text" className="header__search" placeholder="Search"></input>
@@ -20,7 +21,8 @@ const Header = () => {
                 </div>
             </div>
             <div className="header__upload-container">
-                <button className="header__upload"><img src={upload} alt="logo" className="header__upload--logo"></img><div className="header__upload--text">UPLOAD</div></button>
+                    <Link to="/upload" className="header__upload-link"><button className="header__upload"><img src={upload} alt="logo" className="header__upload--logo"></img><div className="header__upload--text">UPLOAD</div></button></Link>
+                
             </div>
             <div className="header__avarta-container"><img src={avarta} className="header__avarta" alt="header avarta"></img></div>
             
