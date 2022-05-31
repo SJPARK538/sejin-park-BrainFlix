@@ -26,7 +26,7 @@ const Comments = ({comments}) => {
 
     return(
         <div className="comments">
-            <h3 className="comments__title" >3 Comments</h3>
+            <h3 className="comments__title" >{comments.length} Comments</h3>
             <form className="comments__input-container">
                 <img src={avarta} alt="comment avarta" className="comments__image"></img>
                 <div className="comments__text-container">

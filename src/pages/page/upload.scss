@@ -2,11 +2,12 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/breakpoints" as *;
 
+// Mobile Version
 .upload {
     margin: 0 auto;
 
     &__title {
-        margin: 1.5rem 1rem 0 1rem;
+        margin: 1rem 1rem 0 1rem;
         padding-top: 1.5rem;
         font-size: 1.5rem;
         color: $primary-black;
@@ -39,6 +40,7 @@
             background-position: center;
             width: 90vw;
             height: 30vh;
+            border-radius: 0.25rem;
             
         }
     }
@@ -90,6 +92,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            &:hover {
+                background-color: $secondary-blue;
+            }
         }
 
         &--logo {
@@ -112,5 +118,88 @@
 
         }
     }
+}
 
+// Tablet Version
+@include tablet {
+    .upload {
+        margin: 0 1.5rem;
+        
+
+        &__title {
+            font-size: 2.0625rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            padding-bottom: 2.25rem;
+            border-bottom: 1px $secondary-mercury solid;
+        }
+    
+        &__video-container{
+            width: 50%;
+
+            &--title {
+                margin: 2.25rem 0 0 0rem;
+                font-size: 0.875rem;
+                font-weight: 700;
+                line-height: 1.375rem;
+            }
+    
+            &--video {
+                width: 45vw;
+                height: 35vh;   
+            }
+        }
+    
+        &__text-container {
+            &--subtitle{
+                font-size: 0.875rem;
+                font-weight: 700;
+                line-height: 1.375rem;
+            }
+    
+            &--textarea{
+                &--up{
+                    width: 95%;    
+                    padding: 1rem;
+                }
+    
+                &--bottom{
+                    width: 95%;
+                    padding: 1rem;
+                }
+            }
+        }
+        &__button-container{
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            border-top: 1px $secondary-mercury solid;
+
+            &--link {
+                order: 2
+            }
+    
+            &--button{
+                font-size: 0.875rem;
+                width: 20vw;
+            }
+    
+            &--logo {
+                width: 1.2rem;
+            }
+    
+            &--text {
+                font-size: 0.875rem;
+                padding-right: 1rem;
+            }
+    
+            &--cancel {
+                font-size: 0.875rem;
+                width: 20vw;
+
+            }
+        }
+    }
 }

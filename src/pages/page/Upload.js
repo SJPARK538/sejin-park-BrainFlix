@@ -24,7 +24,7 @@ const Upload = () => {
                     </div>
                     <div className="upload__button-container">
                         <Link to ="/" className="upload__button-container--link" > 
-                        <button className="upload__button-container--button"><img src={publish} alt="add publish" className="upload__button-container--publish"></img><div className="upload__button-container--text">PUBLISH</div></button>
+                        <button className="upload__button-container--button"><img src={publish} alt="add publish" className="upload__button-container--logo"></img><div className="upload__button-container--text">PUBLISH</div></button>
                         </Link>
                         <button className="upload__button-container--cancel">CANCEL</button>
                     </div>
