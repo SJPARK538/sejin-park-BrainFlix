@@ -6,8 +6,6 @@ import "./comments.scss"
 
 
 const Comments = ({comments}) => {
-        // const mainContentId = props.mainDisplayId
-        // const mainContent = videoDetails.find(video => video.id === mainContentId)
         
     const Defaults = comments.map((comment, index) => {
         return (    

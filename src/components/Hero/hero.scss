@@ -7,26 +7,117 @@
 // Mobile Version
 .hero {
     height: 57vw;
+    position: relative;
+
     &__video {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position:relative;
+
+
       &:focus {
         outline-width: 0;
       }
+
+    
+      &-info{ 
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        position: absolute ;
+        gap: 0.5rem;
+        bottom: 0;
+        margin-bottom: 0.5rem;
+      
+
+      }
+
+      &-play{
+        width: 10vw;
+        background-color: ($secondary-black) ;
+        text-align: center;
+        border-radius: 0.25rem;
+        
+        
+
+        &--button {
+          color:$primary-white;
+          padding: 0.5rem;
+          width: 0.5rem;
+        }
+      }
+
+      &-duration{
+        display: flex;
+        background-color: $secondary-black;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        width: 50vw;
+
+        &--scrub{
+          color:$primary-white;
+          width: 0.5rem;
+
+        }
+
+        &--bar {
+          width: 30vw;
+          height: 0.25rem;
+          background-color: $primary-black;
+          
+        }
+        &--button {
+          color: $primary-white;
+          font-size: 0.5rem;
+        }
+      }
+
+      &-screen {
+        background-color: $secondary-black;
+        padding: 0.5rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        width: 15vw;
+        border-radius: 0.25rem;
+
+        
+        
+
+        &--button {
+          color: $primary-white;
+          width: 1rem;
+        }
+
+        &--volumeup {
+          color: $primary-white;
+          width: 1rem;
+
+        }
+
+      }
+
+
     }
-  }
+}
 
   // Tablet Version
   @include tablet {
     .hero {
       display: flex;
       justify-content: center;
-      background-color: $primary-black;
+      background-color: $secondary-black;
 
 
       &__video {
         width: 95vw;
+        }
+
+        &-info {
+          width:95vw;
         }
       }
   }
