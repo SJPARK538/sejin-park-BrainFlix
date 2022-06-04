@@ -10,11 +10,9 @@ import scrub from "../../assets/Images/Icons/scrub.svg"
 
 
 const Hero = ({hero}) => {
-
-    const heroContent = hero.map((object,id)=>{
         return(
-            <div key ={object.id} className="hero">
-                <video  className="hero__video" poster={object.image}  type="video/mp4" ></video>
+            <div key ={hero.id} className="hero">
+                <video  className="hero__video" poster={hero.image}  type="video/mp4" ></video>
                 <div className="hero__video-info">
                     <div className="hero__video-play">
                         <img src={play}  alt="play button" className="hero__video-play--button"></img>
@@ -22,7 +20,7 @@ const Hero = ({hero}) => {
                     <div className="hero__video-duration">
                         <img src={scrub} alt="scrub" className="hero__video-duration--scrub"></img>
                         <div className="hero__video-duration--bar"></div>
-                        <div className="hero__video-duration--button">0:00/{object.duration}</div>
+                        <div className="hero__video-duration--button">0:00/{hero.duration}</div>
                     </div>
                     <div className="hero__video-screen">
                         <img src={fullscreen} alt ="full screen" className="hero__video-screen--button"></img>
@@ -32,9 +30,7 @@ const Hero = ({hero}) => {
 
             </div>
         );
-    })
-
-    return <div>{heroContent}</div>
+    
 }
 
 export default Hero;

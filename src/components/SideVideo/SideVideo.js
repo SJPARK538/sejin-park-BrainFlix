@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 
 const Sidepage = ({sideVideos}) => {
 
-
-    const SideContent = sideVideos.map((side, index) => {
+    const SideContent = sideVideos.map((side, id) => {
         return(
             <Link 
             className="sidevideo__selected"
             to={`/video/${side.id}`}
             key={side.id}
             >
-
+                
             <div key={side.id} id={side.id} className="sidepage__content-container">
                 <img src ={side.image} alt="video thumbnail" className="sidepage__image-container"></img>
                 <div className="sidepage__text-container">
@@ -22,7 +21,6 @@ const Sidepage = ({sideVideos}) => {
                 </div>
             </div>
             </Link>
-        
         )
     })
     return (

@@ -14,9 +14,8 @@ let apiKey ="api_key=cfddcce4-2fac-4b3f-8b69-8f2abdd9b1d9";
 class Home extends React.Component {
     state = {
         sideVideos: [],
-        selectedVideo: [],
+        selectedVideo: null,
         allVideos: [],
-        comments: []
     };
 
 componentDidMount(){
@@ -26,25 +25,23 @@ componentDidMount(){
         const allVideos = response.data;   
 
         axios
-        .get (`${apiUrl}/videos/84e96018-4022-434e-80bf-000ce4cd12b8?${apiKey}`) // Get main video content info
+        .get (`${apiUrl}/videos/${allVideos[0].id}?${apiKey}`) // Get main video content info
         .then(response => {
-            let sideVideos = allVideos.filter(video => video.id !=="84e96018-4022-434e-80bf-000ce4cd12b8");     //Get sidevideos except selected video   
+            let sideVideos = allVideos.filter(video => video.id !==`${allVideos[0].id}`);     //Get sidevideos except selected video   
             const selectedVideo= response.data;   //selected video (mainvideo)
-            const comments = response.data.comments
-            this.setState({sideVideos, selectedVideo:[selectedVideo], allVideos, comments});
+            this.setState({sideVideos, selectedVideo, allVideos});
         });
     });
 }
 
 componentDidUpdate(prevProps){
-    if(prevProps.match !== this.props.match){
+    if(prevProps.match.params.id !== this.props.match.params.id){
         axios
         .get(`${apiUrl}/videos/${this.props.match.params.id}?${apiKey}`)
         .then (response => {
             const selectedVideo = response.data;
-            const comments=response.data.comments;
             let sideVideos = this.state.allVideos.filter(video => video.id !== this.props.match.params.id);
-            this.setState({sideVideos, selectedVideo:[selectedVideo], comments});
+            this.setState({sideVideos, selectedVideo});
         });
     }
 }
@@ -52,15 +49,14 @@ componentDidUpdate(prevProps){
 render(){
 return (
     <>
-    <Hero hero={this.state.selectedVideo} />
-    <Main mainDisplayId={this.state.selectedVideo}/>
-    <Comments  comments={this.state.comments}/>
+    {this.state.selectedVideo ?<Hero  hero={this.state.selectedVideo}/>: null}
+    {this.state.selectedVideo ?<Main  main={this.state.selectedVideo}/>: null}
+    {this.state.selectedVideo ?<Comments  comments={this.state.selectedVideo.comments}/>: null}
     <SideVideo  sideVideos={this.state.sideVideos}/>
     </>
  );
 }
 }
-
 
 
 export default Home;

@@ -5,9 +5,6 @@ import upload from "../../assets/Images/Icons/upload.svg"
 import "./header.scss"
 import { Link } from "react-router-dom";
 
-
-
-
 const Header = () => {
     return (
         <header className="header">
@@ -21,11 +18,9 @@ const Header = () => {
                 </div>
             </div>
             <div className="header__upload-container">
-                    <Link to="/upload" className="header__upload-link"><button className="header__upload"><img src={upload} alt="logo" className="header__upload--logo"></img><div className="header__upload--text">UPLOAD</div></button></Link>
-                
+                    <Link to="/upload" className="header__upload-link"><button className="header__upload"><img src={upload} alt="logo" className="header__upload--logo"></img><div className="header__upload--text">UPLOAD</div></button></Link>  
             </div>
             <div className="header__avarta-container"><img src={avarta} className="header__avarta" alt="header avarta"></img></div>
-            
         </header>
     )
 }

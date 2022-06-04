@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 
 const Upload = () => {
+
+    function published(){
+        alert("PUBLISHED!!")
+    }
     return (
         <div className="upload">
             <h1 className="upload__title">Upload Video</h1>
@@ -24,7 +28,7 @@ const Upload = () => {
                     </div>
                     <div className="upload__button-container">
                         <Link to ="/" className="upload__button-container--link" > 
-                        <button className="upload__button-container--button"><img src={publish} alt="add publish" className="upload__button-container--logo"></img><div className="upload__button-container--text">PUBLISH</div></button>
+                        <button onClick={published} className="upload__button-container--button"><img src={publish} alt="add publish" className="upload__button-container--logo"></img><div className="upload__button-container--text">PUBLISH</div></button>
                         </Link>
                         <button className="upload__button-container--cancel">CANCEL</button>
                     </div>
