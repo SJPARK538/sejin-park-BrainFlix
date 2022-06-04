@@ -127,7 +127,7 @@
         }
 
         &-duration{
-          width: 60vw;
+          width: 65vw;
 
           &--bar {
             width: 50vw;
@@ -136,6 +136,15 @@
 
         &-screen {
           justify-content: space-around;
+          width: 10vw;
+
+          &--button {
+            width: 1.5rem;
+          }
+
+          &--volumeup {
+            width: 1.5rem;
+          }
         }
 
 
@@ -150,7 +159,23 @@
   @include desktop {
     .hero {
       &__video {
-        width: 75vw;
+        width: 90vw;
+
+        &-play {
+          width: 5vw;
+        }
+
+        &-duration {
+          width: 70vw;
+
+          &--bar {
+            width: 70vw;
+          }
+        }
+
+        &-screen {
+          width: 5vw;
+        }
 
       }
     }
