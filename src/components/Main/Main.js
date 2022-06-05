@@ -4,8 +4,6 @@ import likes from "../../assets/Images/Icons/likes.svg"
 import "./main.scss"
 
 const Main = ({main}) => {
-
-
         return(
             <div key={main.id} className="main">
                 <h1 className="main__title">{main.title}</h1>
