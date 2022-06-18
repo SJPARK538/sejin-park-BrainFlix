@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "../../components/Hero/Hero";
-import Main from "../../components/Main/Main";
-import Comments from "../../components/Comments/Comments";
-import SideVideo from "../../components/SideVideo/SideVideo";
+import Hero from "../Hero/Hero";
+import Main from "../Main/Main";
+import Comments from "../Comments/Comments";
+import SideVideo from "../SideVideo/SideVideo";
 import axios from "axios";
 
 // API KEY "api_key": "cfddcce4-2fac-4b3f-8b69-8f2abdd9b1d9"
@@ -20,15 +20,15 @@ class Home extends React.Component {
 
 componentDidMount(){
     axios
-    .get(`${apiUrl}/videos?${apiKey}`)    //Get all sidevideos array 
+    .get(`${apiUrl}/videos?${apiKey}`)   
     .then (response =>{
         const allVideos = response.data;   
 
         axios
-        .get (`${apiUrl}/videos/${allVideos[0].id}?${apiKey}`) // Get main video content info
+        .get (`${apiUrl}/videos/${allVideos[0].id}?${apiKey}`) 
         .then(response => {
-            let sideVideos = allVideos.filter(video => video.id !==`${allVideos[0].id}`);     //Get sidevideos except selected video   
-            const selectedVideo= response.data;   //selected video (mainvideo)
+            let sideVideos = allVideos.filter(video => video.id !==`${allVideos[0].id}`);     
+            const selectedVideo= response.data;  
             this.setState({sideVideos, selectedVideo, allVideos});
         });
     });

@@ -1,5 +1,5 @@
 import React from "react";
-import "./upload.scss";
+import "./Upload.scss";
 import publish from "../../assets/Images/Icons/publish.svg"
 import { Link } from "react-router-dom";
 

@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../assets/Images/BrainFlix-logo.svg"
-import avarta from "../../assets/Images/avartar.jpg"
+import avartar from "../../assets/Images/avartar.jpg"
 import upload from "../../assets/Images/Icons/upload.svg"
-import "./header.scss"
+import "./Header.scss"
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -14,13 +14,13 @@ const Header = () => {
             <div className="header__search-container">
                 <input type ="text" className="header__search" placeholder="Search"></input>
                 <div className="header__image-container">
-                    <img src={avarta} className="header__image"  alt="avarta"></img>
+                    <img src={avartar} className="header__image"  alt="avarta"></img>
                 </div>
             </div>
             <div className="header__upload-container">
                     <Link to="/upload" className="header__upload-link"><button className="header__upload"><img src={upload} alt="logo" className="header__upload--logo"></img><div className="header__upload--text">UPLOAD</div></button></Link>  
             </div>
-            <div className="header__avarta-container"><img src={avarta} className="header__avarta" alt="header avarta"></img></div>
+            <div className="header__avarta-container"><img src={avartar} className="header__avarta" alt="header avarta"></img></div>
         </header>
     )
 }

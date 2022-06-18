@@ -1,7 +1,7 @@
 import React from "react";
 import views from "../../assets/Images/Icons/views.svg"
 import likes from "../../assets/Images/Icons/likes.svg"
-import "./main.scss"
+import "./Main.scss"
 
 const Main = ({main}) => {
         return(

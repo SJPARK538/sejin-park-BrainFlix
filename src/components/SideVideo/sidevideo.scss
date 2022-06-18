@@ -42,12 +42,16 @@
             font-size: 0.8125rem;
             line-height: 1.125rem;
             font-weight: 700;
+            text-decoration: none;
+            color: $primary-black;
         }
         
         &--author {
             font-size: 0.8125rem;
             line-height: 1.125rem;
             font-weight: 400;
+            text-decoration: none;
+            color: $primary-black;
             
         }
     }

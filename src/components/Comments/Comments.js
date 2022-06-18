@@ -1,7 +1,7 @@
 import React from "react";
 import avarta from "../../assets/Images/avartar.jpg"
 import commentButton from "../../assets/Images/Icons/add_comment.svg"
-import "./comments.scss"
+import "./Comments.scss"
 
 
 

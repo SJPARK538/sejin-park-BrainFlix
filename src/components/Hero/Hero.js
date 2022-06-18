@@ -1,11 +1,10 @@
 import React from "react";
-import "./hero.scss"
+import "./Hero.scss"
 import pause from "../../assets/Images/Icons/pause.svg"
 import play from "../../assets/Images/Icons/play.svg"
 import fullscreen from "../../assets/Images/Icons/fullscreen.svg"
 import volumeOff from "../../assets/Images/Icons/volume_off.svg"
 import volumeup from "../../assets/Images/Icons/volume_up.svg"
-
 import scrub from "../../assets/Images/Icons/scrub.svg"
 
 
