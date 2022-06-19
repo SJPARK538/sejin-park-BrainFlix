@@ -1,8 +1,8 @@
 import React from "react";
 import Header from './components/Header/Header';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home from "../src/components/Home/Home"
-import Upload from "../src/components/Upload/Upload"
+import Home from "../src/pages/Home/Home"
+import Upload from "../src/pages/Upload/Upload"
 
 
 

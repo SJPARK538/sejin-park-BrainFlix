@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "../Hero/Hero";
-import Main from "../Main/Main";
-import Comments from "../Comments/Comments";
-import SideVideo from "../SideVideo/SideVideo";
+import Hero from "../../components/Hero/Hero";
+import Main from "../../components/Main/Main";
+import Comments from "../../components/Comments/Comments";
+import SideVideo from "../../components/SideVideo/SideVideo";
 import axios from "axios";
 
 // API KEY "api_key": "cfddcce4-2fac-4b3f-8b69-8f2abdd9b1d9"
@@ -15,7 +15,6 @@ class Home extends React.Component {
     state = {
         sideVideos: [],
         selectedVideo: {},
-        allVideos: [],
     };
 
 componentDidMount(){
