@@ -9,7 +9,7 @@ const Sidepage = ({sideVideos}) => {
         return(
             <Link 
             className="sidevideo__selected"
-            to={`/video/${side.id}`}
+            to={`/videos/${side.id}`}
             key={side.id}
             >
                 
