@@ -22,18 +22,6 @@ componentDidMount(){
     .get("http://localhost:8080/api/videos")   
     .then (response =>{
         const allVideos = response.data;   
-        console.log(allVideos[0].id)
-        
-        // if (this.props.match.params.id){
-        //     axios
-        //     .get (`http://localhost:8080/api/videos/${this.props.match.params.id}`) 
-        //     .then(response => {
-        //         let sideVideos = allVideos.filter(video => video.id !==`${this.props.match.params.id}`);     
-        //         const selectedVideo= response.data;  
-        //         this.setState({sideVideos, selectedVideo, allVideos});
-        //     });
-            
-        // } else {
             
             axios
             .get(`http://localhost:8080/api/videos/${allVideos[0].id}`)
@@ -41,6 +29,8 @@ componentDidMount(){
                 let sideVideos = allVideos.filter(video => video.id !== `${allVideos[0].id}`);     
                 const selectedVideo= response.data;  
                 console.log(response.data)
+                const newId = Math.random();
+                console.log(newId)
                 this.setState({sideVideos, selectedVideo, allVideos});
             })
         // }
