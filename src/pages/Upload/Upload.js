@@ -23,15 +23,16 @@ class Upload extends React.Component {
 
     uploadForm = event => {
         event.preventDefault();
-        console.log(event.target)
         axios
         .post("http://localhost:8080/api/videos",{
             title: event.target.title.value,
+            channel: event.target.channel.value,
             description: event.target.description.value,
             image: travel,
-            channel: event.target.channel.value,
             views: "12",
-            likes: "5"
+            likes: "5",
+            timestamp: new Date().toLocaleDateString(),
+            comments: []
         })
  
         .then(response => {
