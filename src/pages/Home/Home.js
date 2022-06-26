@@ -5,12 +5,6 @@ import Comments from "../../components/Comments/Comments";
 import SideVideo from "../../components/SideVideo/SideVideo";
 import axios from "axios";
 
-// API KEY "api_key": "cfddcce4-2fac-4b3f-8b69-8f2abdd9b1d9"
-
-// let apiUrl = "https://project-2-api.herokuapp.com";
-// let apiKey ="api_key=cfddcce4-2fac-4b3f-8b69-8f2abdd9b1d9";
-
-
 class Home extends React.Component {
     state = {
         sideVideos: [],
