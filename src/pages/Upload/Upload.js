@@ -29,7 +29,9 @@ class Upload extends React.Component {
             title: event.target.title.value,
             description: event.target.description.value,
             image: travel,
-            channel: event.target.channel.value
+            channel: event.target.channel.value,
+            views: "12",
+            likes: "5"
         })
  
         .then(response => {

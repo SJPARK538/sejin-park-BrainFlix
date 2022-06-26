@@ -28,13 +28,8 @@ componentDidMount(){
             .then( response => {
                 let sideVideos = allVideos.filter(video => video.id !== `${allVideos[0].id}`);     
                 const selectedVideo= response.data;  
-                console.log(response.data)
-                const newId = Math.random();
-                console.log(newId)
                 this.setState({sideVideos, selectedVideo, allVideos});
             })
-        // }
- 
     });
  
 }
